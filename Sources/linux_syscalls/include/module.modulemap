@@ -1,0 +1,4 @@
+module linux_syscalls {
+    header "linux_syscalls.h"
+    export *
+}

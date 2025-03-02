@@ -521,6 +521,7 @@ let package = Package(
                 "SourceControl",
                 "Workspace",
                 "XCBuildSupport",
+                "linux_syscalls"
             ] + swiftSyntaxDependencies(["SwiftIDEUtils"]),
             exclude: ["CMakeLists.txt", "README.md"],
             swiftSettings: [
@@ -688,6 +689,13 @@ let package = Package(
                 .unsafeFlags(["-package-description-version", "999.0"]),
                 .unsafeFlags(["-enable-library-evolution"]),
             ]
+        ),
+
+        // MARK: Linux C targets
+
+        .target(
+            name: "linux_syscalls",
+            dependencies: []
         ),
 
         // MARK: Additional Test Dependencies
